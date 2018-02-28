@@ -1,0 +1,115 @@
+<h1>Nuevo Horario</h1>
+
+<div class="row">
+  <div class="col-sm-6 text-left">
+    <button [routerLink]="['/horariosadmin']" type="button" class="btn btn-info">
+      <<
+    </button>
+  </div>
+  <div class="col-sm-6 text-right">
+    <button [routerLink]="['/horarioadmin','nuevo']" type="button" class="btn btn-info">
+      Limpiar
+    </button>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <form (ngSubmit)="guardar()" #forma="ngForm">
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Dia:</label>
+        <div class="col-10">
+          <select
+            name="dia"
+            [(ngModel)]="horario.dia"
+            class="form-control">
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miercoles">Miercoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sabado">Sabado</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Hora:</label>
+        <div class="col-10">
+          <select
+            name="hora"
+            [(ngModel)]="horario.hora"
+            class="form-control">
+            <option value="7-9">7-9</option>
+            <option value="9-11">9-11</option>
+            <option value="11-13">11-13</option>
+            <option value="13-15">13-15</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Materia:</label>
+        <div class="col-10">
+          <select name="materia"
+                  [(ngModel)]="horario.materia" class="form-control">
+            <option value="Tics">Tics</option>
+            <option value="Soa">Soa</option>
+            <option value="Contabilidad">Contabilidad</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Codigo:</label>
+        <div class="col-10">
+          <select name="codigo"
+                  [(ngModel)]="horario.codigo" class="form-control">
+            <option value="TSI213">TSI213</option>
+            <option value="TSI11">TSI11</option>
+            <option value="TSI231">TSI231</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Carrera:</label>
+        <div class="col-10">
+          <select name="carrera"
+                  [(ngModel)]="horario.carrera" class="form-control">
+            <option value="ASI">ASI</option>
+            <option value="ASA">ASA</option>
+            <option value="ET">ET</option>
+            <option value="EM">EM</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Nivel:</label>
+        <div class="col-10">
+          <select name="nivel"
+                  [(ngModel)]="horario.nivel" class="form-control">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Grupo:</label>
+        <div class="col-10">
+          <select class="form-control" name="grupo" [(ngModel)]="horario.grupo">
+            <option value="GR1">GR1</option>
+            <option value="GR2">GR2</option>
+            <option value="GR3">GR3</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <button type="submit" class="btn btn-info ">
+          Guardar
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

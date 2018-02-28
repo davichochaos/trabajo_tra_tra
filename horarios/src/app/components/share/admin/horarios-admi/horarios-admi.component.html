@@ -1,0 +1,82 @@
+<app-navbar-admi></app-navbar-admi>
+<br>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="carrera">Carrera</label>
+      <select class="form-control" id="carrera">
+        <option>ASI</option>
+        <option>ASA</option>
+        <option>EMI</option>
+        <option>TELE</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="nivel">Semestre</label>
+      <select class="form-control" id="nivel">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+
+    <div class="container-fluid">
+      <table class="table table-responsive table-hover">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miercoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+          <th>Sabado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">7:00 - 9-00</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">9:00 - 11:00</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">11:00 - 13:00</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">13:00 - 15:00</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">15:00 - 18:00</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        <tr>
+          <th scope="row">18:00 - 20:00</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <button [routerLink]="['/horarioadmin', 'nuevo']" type="button" class="btn btn-info">Nuevo Horario</button>
+  </form>
+</div>
+
+
